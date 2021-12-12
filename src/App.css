@@ -1,38 +1,75 @@
-.App {
-  text-align: center;
+.allCounter {
+    margin: 250px auto auto;
+    width: 400px;
+    height: 300px;
+    display: flex;
+    flex-wrap: wrap;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.counter {
+    font-size: 70px;
+    text-align: center;
+    width: 394px;
+    height: 200px;
+    border-style: solid;
+    border-color: deepskyblue;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.counterRed {
+    color: red;
+    font-size: 70px;
+    text-align: center;
+    width: 394px;
+    height: 200px;
+    border-style: solid;
+    border-color: deepskyblue;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.inc {
+    text-align: center;
+    border-style: solid;
+    border-color: deepskyblue;
+    width: 194px;
+    height: 88px;
 }
 
-.App-link {
-  color: #61dafb;
+.reset {
+    text-align: center;
+    border-style: solid;
+    border-color: deepskyblue;
+    width: 194px;
+    height: 88px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.buttonInc {
+    margin: 10px auto;
+    padding: 25px 70px;
+    background-color: deepskyblue;
+    border-color: deepskyblue;
 }
+
+.buttonRes {
+    margin: 10px auto;
+    padding: 25px 66px;
+    background-color: darkorange;
+    border-color: darkorange;
+}
+
+.buttonIncOff, buttonIncOff[disabled] {
+    margin: 10px auto;
+    padding: 25px 70px;
+    cursor: not-allowed;
+    background-color: grey !important;
+    pointer-events: none;
+    border-color: grey;
+}
+
+.buttonResOff {
+    margin: 10px auto;
+    padding: 25px 66px;
+    cursor: not-allowed;
+    background-color: grey !important;
+    pointer-events: none;
+    border-color: grey;
+}
+

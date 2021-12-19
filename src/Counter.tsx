@@ -1,27 +1,31 @@
-import React, {ButtonHTMLAttributes, useState} from "react";
+import React from "react";
 import "./App.css";
+import {MyBTN} from "./MyBTN";
 
 type counterType = {
-    counter: number
+    counter: string
+    sum: any
+    setSum: any
+
 }
 
 function Counter(props: counterType) {
-    let [sum, setSum] = useState(0);
-    const test = sum > 0 ? 'buttonRes' : 'buttonResOff';
+
+    const test = props.sum > 0 ? 'buttonRes' : 'buttonResOff';
     const testFunc = () => {
-            sum < props.counter &&  setSum(sum + 1)
+            props.sum < props.counter &&  props.setSum(props.sum + 1)
     }
-    const testFunc2 = () => setSum(0)
+    const testFunc2 = () => props.setSum(0)
 
     return (
         <div className={'allCounter'}>
             <div
-                className={sum >= props.counter ? 'counterRed' : 'counter'}>
-                {sum}
+                className={props.sum >= props.counter ? 'counterRed' : 'counter'}>
+                {props.sum}
             </div>
 
             <div className={'inc'}>
-                <MyBTN className={sum >= props.counter ? 'buttonIncOff' : 'buttonInc'} onClick={testFunc}>
+                <MyBTN className={props.sum >= props.counter ? 'buttonIncOff' : 'buttonInc'} onClick={testFunc}>
                     ВВОД
                 </MyBTN>
             </div>
@@ -33,9 +37,5 @@ function Counter(props: counterType) {
     )
 }
 
-
-const MyBTN = (props: ButtonHTMLAttributes<any>) => {
-    return <button {...props}>{props.children}</button>
-}
 
 export default Counter;

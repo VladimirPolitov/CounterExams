@@ -55,11 +55,11 @@
     border-color: darkorange;
 }
 
-.buttonIncOff, buttonIncOff[disabled] {
+.buttonIncOff {
     margin: 10px auto;
     padding: 25px 70px;
     cursor: not-allowed;
-    background-color: grey !important;
+    background-color: grey;
     pointer-events: none;
     border-color: grey;
 }
@@ -68,7 +68,7 @@
     margin: 10px auto;
     padding: 25px 66px;
     cursor: not-allowed;
-    background-color: grey !important;
+    background-color: grey;
     pointer-events: none;
     border-color: grey;
 }

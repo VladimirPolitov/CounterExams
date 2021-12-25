@@ -3,38 +3,38 @@ import "./App.css";
 import {MyBTN} from "./MyBTN";
 
 type counterType = {
-    counter: any
-    valueMax: any
-    setValueMax: any
-    counterMax: any
+    counter: number
+    counterMax: number
+    setCounter: any
+    valueStart: number
 }
 
 
 function Counter(props: counterType) {
 
-    const test = props.counter > props.valueMax ? 'buttonRes' : 'buttonResOff';
-    const testFunc = () => {props.counter < props.valueMax && props.counter(props.counter + 1)}
-    const testFunc2 = () => props.setValueMax(0)
+    const insert = () => {
+        props.counter < props.counterMax && props.setCounter(Number(props.counter) + 1)
+    }
+    const reset = () => props.setCounter(props.valueStart)
 
     return (
         <div className={'allCounter'}>
             <div
-                className={props.valueMax >= props.counter ? 'counterRed' : 'counter'}>
+                className={props.counter >= props.counterMax ? 'counterRed' : 'counter'}>
                 {props.counter}
             </div>
 
 
-
             <div className={'inc'}>
-                <MyBTN className={props.valueMax >= props.counter ? 'buttonIncOff' : 'buttonInc'} onClick={testFunc}>
+                <MyBTN className={props.counter >= props.counterMax ? 'buttonIncOff' : 'buttonInc'} onClick={insert}>
                     ВВОД
                 </MyBTN>
             </div>
 
 
-
             <div className={'reset'}>
-                <MyBTN className={test} onClick={testFunc2}>СБРОС</MyBTN>
+                <MyBTN className={props.counter >= props.counterMax ?   'buttonRes': 'buttonResOff'}
+                       onClick={reset}>СБРОС</MyBTN>
             </div>
         </div>
     )

@@ -6,10 +6,10 @@ import {MyBTN} from "./MyBTN";
 function App() {
 
 
-    let [valueMax, setValueMax] = useState('0');
-    let [valueStart, setValueStart] = useState('0');
-    let [counter, setCounter] = useState('0')
-    let [counterMax, setCounterMax] = useState('0')
+    let [valueMax, setValueMax] = useState(0)
+    let [valueStart, setValueStart] = useState(0)
+    let [counter, setCounter] = useState(0)
+    let [counterMax, setCounterMax] = useState(0)
 
     let setValue = () => {return (setCounter(valueStart), setCounterMax(valueMax))}
 
@@ -20,8 +20,8 @@ function App() {
                 <Setter valueMax={valueMax} setValueMax={setValueMax}
                         valueStart={valueStart} setValueStart={setValueStart}
                 />
-                <Counter counter={counter} valueMax={valueMax} setValueMax={setValueMax}
-                         counterMax={counterMax}
+                <Counter counter={counter} counterMax={counterMax}
+                         setCounter={setCounter} valueStart={valueStart}
                 />
             </div>)
     }

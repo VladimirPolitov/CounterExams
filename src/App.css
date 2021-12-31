@@ -1,75 +1,91 @@
 .allCounter {
-    margin: 250px auto auto;
-    width: 400px;
-    height: 300px;
     display: flex;
+    width: 1200px;
+    margin: 200px auto auto;
+}
+
+.leftCount {
+    border-style: solid;
+    border-color: darkslategray;
+    height: 400px;
+    width: 600px;
     flex-wrap: wrap;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.rightCount {
+    border-style: solid;
+    border-color: darkslategray;
+    height: 400px;
+    width: 600px;
+    flex-wrap: wrap;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.setter {
+    font-size: 30px;
+    padding-top: 140px;
 }
 
 .counter {
-    font-size: 70px;
+    font-size: 100px;
     text-align: center;
-    width: 394px;
-    height: 200px;
-    border-style: solid;
-    border-color: deepskyblue;
+    padding-top: 100px;
 }
 
 .counterRed {
     color: red;
-    font-size: 70px;
+    font-size: 100px;
     text-align: center;
-    width: 394px;
-    height: 200px;
-    border-style: solid;
-    border-color: deepskyblue;
-}
-
-.inc {
-    text-align: center;
-    border-style: solid;
-    border-color: deepskyblue;
-    width: 194px;
-    height: 88px;
-}
-
-.reset {
-    text-align: center;
-    border-style: solid;
-    border-color: deepskyblue;
-    width: 194px;
-    height: 88px;
+    padding-top: 100px;
 }
 
 .buttonInc {
-    margin: 10px auto;
-    padding: 25px 70px;
-    background-color: deepskyblue;
-    border-color: deepskyblue;
+    margin-top: 30px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+
+.buttonIncOff{
+    margin-top: 30px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    pointer-events: none;
+    background-color: red;
+    cursor: not-allowed;
+
+}
+
+.buttonInc {
+    margin-top: 30px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+
 }
 
 .buttonRes {
-    margin: 10px auto;
-    padding: 25px 66px;
-    background-color: darkorange;
-    border-color: darkorange;
-}
-
-.buttonIncOff {
-    margin: 10px auto;
-    padding: 25px 70px;
-    cursor: not-allowed;
-    background-color: grey;
-    pointer-events: none;
-    border-color: grey;
+    margin-top: 30px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin-left: 30px;
 }
 
 .buttonResOff {
-    margin: 10px auto;
-    padding: 25px 66px;
-    cursor: not-allowed;
-    background-color: grey;
+    margin-top: 30px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin-left: 30px;
     pointer-events: none;
-    border-color: grey;
+    background-color: red;
+    cursor: not-allowed;
 }
+
+
 

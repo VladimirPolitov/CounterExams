@@ -18,23 +18,20 @@ function Counter(props: counterType) {
     const reset = () => props.setCounter(props.valueStart)
 
     return (
-        <div className={'allCounter'}>
+        <div>
             <div
                 className={props.counter >= props.counterMax ? 'counterRed' : 'counter'}>
                 {props.counter}
             </div>
 
-
             <div className={'inc'}>
-                <MyBTN className={props.counter >= props.counterMax ? 'buttonIncOff' : 'buttonInc'} onClick={insert}>
-                    ВВОД
+                <MyBTN className={props.counter >= props.counterMax ? 'buttonIncOff' : 'buttonInc'}
+                       onClick={insert}>
+                    INC
                 </MyBTN>
-            </div>
 
-
-            <div className={'reset'}>
-                <MyBTN className={props.counter >= props.counterMax ?   'buttonRes': 'buttonResOff'}
-                       onClick={reset}>СБРОС</MyBTN>
+                <MyBTN className={props.counter >= props.counterMax ? 'buttonRes' : 'buttonResOff'}
+                       onClick={reset}>RES</MyBTN>
             </div>
         </div>
     )

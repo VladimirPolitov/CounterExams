@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import Counter from "./Counter";
 import {Setter} from "./Setter";
 import {MyBTN} from "./MyBTN";
@@ -12,6 +12,30 @@ function App() {
     let [valueStart, setValueStart] = useState(0)
     let [counter, setCounter] = useState(0)
     let [counterMax, setCounterMax] = useState(0)
+
+    useEffect(()=>{
+        let maxValue = localStorage.getItem('valueMax')
+        if (maxValue) {
+            let newMaxValue = JSON.parse(maxValue)
+            setValueMax(newMaxValue)
+        }
+    },[])
+
+    useEffect(()=>{
+        let startValue = localStorage.getItem('valueStart')
+        if (startValue) {
+            let newStartValue = JSON.parse(startValue)
+            setValueStart(newStartValue)
+        }
+    },[])
+
+    useEffect(()=> {
+        localStorage.setItem('valueStart', JSON.stringify(valueStart))
+    }, [valueStart])
+
+    useEffect(()=>{
+        localStorage.setItem('valueMax', JSON.stringify(valueMax))
+    }, [valueMax])
 
     let setValue = () => {
         return (setCounter(valueStart), setCounterMax(valueMax))
